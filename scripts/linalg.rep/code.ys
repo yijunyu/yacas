@@ -1137,7 +1137,7 @@ NormaliseMDP(matrixP_IsSquareMatrix, vectorI_IsVector) <--
 	Echo(".");
 	Echo("...I'");
 	ForEach(i,1 .. n) [
-	  vectorI2[i] := vectorI[i]* vectorP1[i]/vectorP2[i];
+	  vectorI2[i] := N(N(vectorI[i])* N(vectorP1[i])/N(vectorP2[i]));
 	];
 	Echo(".");
 	{vectorR, vectorP1, vectorP2, matrixP1, vectorC, matrixP2, vectorI2, diagonals};
